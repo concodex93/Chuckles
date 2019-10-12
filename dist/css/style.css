@@ -3,29 +3,43 @@
 */
 
 .flexbox-menu-container {
-  border: 1px solid black;
   height: 72px;
   display: flex;
   justify-content: center;
-  background-color: #38A1F3;
+  background-color: #92e6e6;
 }
 
 .flexbox-menu {
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
 }
 
 .flexbox-title {
     display: inline-block;
-    border: 1px solid black;
 }
 
 .flex-buttons {
     display: flex;
-    border: 1px solid black;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
+
+#btn-next, #btn-prev {
+    background-color: #92e6e6;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#btn-next:hover, #btn-prev:hover {opacity: 1}
 
 /*  
     SEARCH
@@ -34,10 +48,8 @@
 .flexbox-body-container {
     display: flex;
     justify-content: center;
-    border: 1px solid black;
     height: 250px;
-    background-color: #38A1F3;
-    
+    background-color: #92e6e6;    
 }
 
 .flexbox-search {
@@ -45,7 +57,6 @@
     justify-content: space-evenly;
     width: 600px;
     align-items: center;
-    border: 1px solid black;
 }
 
 .search-bar{
@@ -65,15 +76,17 @@
 
 .search-btn {
     display: flex;
+    background: #8D99AE;
+    color:white;
     justify-content: center;
     border: none;
     width: 20%;
     padding: 15px;
-    background: #ddd;
     font-size: 17px;
     float: right;
 }
 
+.search-btn:hover{opacity: 1}
 
 /*  
     RESULTS
@@ -83,7 +96,6 @@
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-evenly;
-    border: 1px solid black;
     /* height: 600px; */
 }
 
@@ -93,7 +105,8 @@
     flex-wrap: wrap;
     justify-content: center;
     width: 1000px;
-    border: 1px solid black;
+    font-family: 'Roboto', sans-serif;
+
 }
 
 .flexbox-result-item-1 {
@@ -103,7 +116,9 @@
     width: 300px;
     height: 200px;
     margin: 10px;
-    border: 1px solid black;
+    border: 1px solid #D3D3D3;
+    border-radius: 8px;
+
 }
 
 /*  
@@ -126,10 +141,11 @@
 }
 
 h1 {
+    bottom: 10px;
     text-align: center;
     position: relative;
-    top: 15px;
     font-family: 'Satisfy', cursive;
     color: white;
+    font-size: 70px;
 }
 

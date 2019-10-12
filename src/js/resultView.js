@@ -1,8 +1,14 @@
 export const clearResultData = () => {
+    console.log('buttons removed');
     document.querySelector('.flexbox-result-items').innerHTML = '';
+    document.querySelector('.flex-buttons').innerHTML = '';
 };
 
-
+export const clearInputField = () => {
+    console.log('text removed');
+    document.querySelector('.search-field').value = '';
+};
+ 
 export const renderJoke = (joke) => {
     const markup =
     `
@@ -34,11 +40,18 @@ const renderPagingBtns = (page, numResults, ResultsPerPage) => {
     const totalPages = Math.ceil(numResults / ResultsPerPage);
     let button;
 
-    if(page == 1 && totalPages > 1) {
+    // Dispay Next btn
+    if (page === 1 && totalPages > 1) {
         button = renderBtn(page, 'next');
+    // Dispay Next and Prev btn
     } else if (page < totalPages) {
-        button = renderBtn(page, 'next');
-        button = renderBtn(page, 'prev');
+        // Displays both btns
+        button = 
+        `
+        ${renderBtn(page, 'prev')}
+        ${renderBtn(page, 'next')}
+        `;
+    // Dispay Prev btn
     } else if (page === totalPages && totalPages > 1) {
         button = renderBtn(page, 'prev');
     }
@@ -61,11 +74,10 @@ const renderResultTextLength = (joke) => {
     let smallJoke;
 
     // Reduce length of joke if it exceeds 200 chars
-    if(joke.joke.length >= 167) {
+    if (joke.joke.length >= 160) {
         smallJoke = joke.joke.slice(0, 166) + '...';
     } else {
         smallJoke = joke.joke;
     }
-
     return smallJoke;
 };
