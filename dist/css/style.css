@@ -21,6 +21,12 @@
     border: 1px solid black;
 }
 
+.flex-buttons {
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-around;
+}
+
 /*  
     SEARCH
 */
@@ -121,6 +127,8 @@
 
 h1 {
     text-align: center;
+    position: relative;
+    top: 15px;
     font-family: 'Satisfy', cursive;
     color: white;
 }
